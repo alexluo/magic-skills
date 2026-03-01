@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: multi-language
+description: Extract translation context
+name: context-extraction
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- multi-language
+- translation
+version: 1.0.0

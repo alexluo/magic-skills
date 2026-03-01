@@ -1,0 +1,30 @@
+author: Anthropic
+category: converted-from-anthropic
+description: Review code for best practices, bugs, and improvements
+input_schema:
+  properties:
+    code:
+      description: Code to review
+      type: string
+    language:
+      default: python
+      description: Programming language
+      type: string
+  required:
+  - code
+  type: object
+name: code-reviewer
+output_schema:
+  properties:
+    issues:
+      items:
+        type: string
+      type: array
+    review:
+      description: Code review result
+      type: string
+    score:
+      description: Code quality score (1-10)
+      type: number
+  type: object
+version: '1.0'

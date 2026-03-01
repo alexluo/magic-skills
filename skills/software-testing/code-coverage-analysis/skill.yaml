@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: software-testing
+description: Analyze code coverage
+name: code-coverage-analysis
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- software-testing
+- coverage
+version: 1.0.0

@@ -1,0 +1,2 @@
+[console_scripts]
+magic-skill = cli.main:cli

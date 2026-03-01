@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "magic-skills": {
+      "command": "python",
+      "args": [
+        "-m",
+        "src.mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "/Users/youlianyao/xdot/my_agents/magic_skills",
+        "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY",
+        "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY"
+      }
+    }
+  }
+}

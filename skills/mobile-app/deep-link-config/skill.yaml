@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: mobile-app
+description: Configure deep links
+name: deep-link-config
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- mobile-app
+- navigation
+version: 1.0.0

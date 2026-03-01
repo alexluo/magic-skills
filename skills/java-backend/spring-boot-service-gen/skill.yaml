@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: java-backend
+description: Generate Spring Boot Service layer code
+name: spring-boot-service-gen
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- java-backend
+- code-generation
+version: 1.0.0

@@ -1,0 +1,89 @@
+{
+  "name": "magic-skills",
+  "displayName": "Magic Skills",
+  "description": "AI-powered skills for 6 professional domains",
+  "version": "1.0.0",
+  "publisher": "magic-skills",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Programming Languages",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onCommand:magic-skills.listSkills",
+    "onCommand:magic-skills.executeSkill"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "magic-skills.listSkills",
+        "title": "List Skills",
+        "category": "Magic Skills"
+      },
+      {
+        "command": "magic-skills.executeSkill",
+        "title": "Execute Skill",
+        "category": "Magic Skills"
+      },
+      {
+        "command": "magic-skills.executeOnSelection",
+        "title": "Execute Skill on Selection",
+        "category": "Magic Skills"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "magic-skills.executeOnSelection",
+          "group": "magic-skills",
+          "when": "editorHasSelection"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Magic Skills",
+      "properties": {
+        "magicSkills.apiEndpoint": {
+          "type": "string",
+          "default": "http://localhost:3000",
+          "description": "Magic Skills API endpoint"
+        },
+        "magicSkills.defaultProvider": {
+          "type": "string",
+          "default": "openai",
+          "enum": [
+            "openai",
+            "anthropic",
+            "google",
+            "qwen",
+            "ernie",
+            "spark",
+            "kimi",
+            "deepseek",
+            "meta",
+            "mistral",
+            "cohere"
+          ],
+          "description": "Default LLM provider"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}

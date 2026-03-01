@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: digital-analytics
+description: Define business metrics
+name: metrics-definition
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- digital-analytics
+- analytics
+version: 1.0.0

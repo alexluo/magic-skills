@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: software-testing
+description: Select regression tests
+name: regression-test-selection
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- software-testing
+- test-selection
+version: 1.0.0

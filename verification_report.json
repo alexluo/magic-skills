@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-02-28T23:55:12.992457",
+  "total_checks": 8,
+  "passed": 8,
+  "failed": 0,
+  "elapsed_seconds": 1.616473913192749,
+  "results": {
+    "环境": true,
+    "技能": true,
+    "LLM提供商": true,
+    "核心模块": true,
+    "接口层": true,
+    "AI工具集成": true,
+    "测试": true,
+    "文档": true
+  },
+  "errors": [],
+  "all_passed": true
+}

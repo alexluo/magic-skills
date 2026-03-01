@@ -1,0 +1,7 @@
+pyproject.toml
+magic_skills.egg-info/PKG-INFO
+magic_skills.egg-info/SOURCES.txt
+magic_skills.egg-info/dependency_links.txt
+magic_skills.egg-info/entry_points.txt
+magic_skills.egg-info/requires.txt
+magic_skills.egg-info/top_level.txt

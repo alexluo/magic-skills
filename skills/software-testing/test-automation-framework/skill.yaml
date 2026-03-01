@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: software-testing
+description: Setup test automation frameworks
+name: test-automation-framework
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- software-testing
+- automation
+version: 1.0.0

@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: java-backend
+description: Generate architecture documentation
+name: architecture-doc
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- java-backend
+- documentation
+version: 1.0.0

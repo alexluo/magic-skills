@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: software-testing
+description: Perform mutation testing
+name: mutation-testing
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- software-testing
+- test-quality
+version: 1.0.0

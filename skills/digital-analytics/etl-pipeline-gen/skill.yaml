@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: digital-analytics
+description: Generate ETL pipelines
+name: etl-pipeline-gen
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- digital-analytics
+- data-processing
+version: 1.0.0

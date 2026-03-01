@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: mobile-app
+description: Generate local storage code
+name: local-storage-gen
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- mobile-app
+- persistence
+version: 1.0.0

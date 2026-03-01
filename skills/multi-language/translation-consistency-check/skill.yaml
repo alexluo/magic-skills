@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: multi-language
+description: Check translation consistency
+name: translation-consistency-check
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- multi-language
+- quality-assurance
+version: 1.0.0

@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magic-skills"
+version = "1.0.0"
+description = "AI-powered skill platform for 6 professional domains with intelligent iteration and AI tool integration"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Magic Skills Team", email = "team@magicskills.dev"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    # Core dependencies
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "click>=8.0.0",
+    "rich>=13.0.0",
+    "httpx>=0.24.0",
+    
+    # LLM SDKs
+    "openai>=1.0.0",
+    "anthropic>=0.8.0",
+    "google-generativeai>=0.3.0",
+    
+    # Web framework
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    
+    # MCP Server
+    "mcp>=1.0.0",
+    
+    # Database
+    "aiosqlite>=0.19.0",
+    
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "jinja2>=3.1.0",
+    "jsonschema>=4.17.0",
+    "tiktoken>=0.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+
+[project.scripts]
+magic-skill = "cli.main:cli"
+
+[project.urls]
+Homepage = "https://github.com/magicskills/magic-skills"
+Documentation = "https://docs.magicskills.dev"
+Repository = "https://github.com/magicskills/magic-skills.git"
+Issues = "https://github.com/magicskills/magic-skills/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "cli*", "api*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=src --cov-report=term-missing --cov-report=html"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]

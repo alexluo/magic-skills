@@ -1,0 +1,16 @@
+author: Magic Skills Team
+category: software-testing
+description: Generate BDD scenarios
+name: bdd-scenario-gen
+parameters:
+  properties:
+    input:
+      description: Input for the skill
+      type: string
+  required:
+  - input
+  type: object
+tags:
+- software-testing
+- bdd
+version: 1.0.0
